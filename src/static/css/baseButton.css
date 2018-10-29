@@ -1,0 +1,18 @@
+.button {
+  margin-top: 18px; 
+  width: 300px;
+  height: 41px;
+  line-height: 41px;
+  background-color: #0f88eb;
+  color: #fff; 
+  font-size: 15px;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer; 
+  margin-left: 40vw;
+}
+.button i {
+  margin-left: 5px;
+  font-size: 20px;
+}

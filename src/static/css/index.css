@@ -1,0 +1,27 @@
+html, body, ul, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #555;
+  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+  background-color: #f7fafc;
+}
+
+html {
+  font-size: 10px;
+} 
+
+html, body {
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
