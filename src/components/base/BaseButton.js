@@ -3,6 +3,6 @@ import '../../static/css/baseButton.css';
 
 export default function (props) {  
   return (<div className="button" onClick={props.onClick}>
-    { props.sub } <i></i>
+    { props.sub } <i className={'fa ' + props.i}></i>
   </div>)
 }

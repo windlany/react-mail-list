@@ -15,13 +15,10 @@ class Input extends React.Component {
     })
   }
   blur = ()=> {
-    let ok = false;
-    if(this.value.replace(/^\s*|\s*$/g, '')) {
-      ok = true;
-      this.setState({
-        warn: false
-      })
-    }
+    this.setState({
+      warn: false
+    })
+    this.props.getValue(this.props.id, this.value);
   }
   change = (event)=> {
     this.value = event.target.value;
@@ -29,7 +26,7 @@ class Input extends React.Component {
   render() {
     return (<div className="input">
       <input type="text" placeholder={this.props.prompt} onFocus={this.focus} onBlur={this.blur} onChange={this.change} />
-      { (this.state.warn || this.props.succ) && <em>{ this.props.warn }</em>}
+      { (this.state.warn || this.props.fail) && <em>{ this.props.warn }</em>}
     </div>)
   }
 }
