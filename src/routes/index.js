@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 
 import Home from '../components/Home';
-import Register from '../containers/Register';
-import Login from '../containers/Login';
+import Register from '../components/Register';
+import Login from '../components/Login';
 
 const Routes = (props)=> (
   <Router history={props.history}>

@@ -5,10 +5,11 @@
   "dependencies": {
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
-    "react-router": "^2.0.1",
     "react-redux": "^5.1.0",
+    "react-router": "^2.0.1",
     "react-scripts": "2.0.5",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

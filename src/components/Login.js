@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Input from '../components/base/BaseInput.js';
-import Button from '../components/base/BaseButton';
+import Input from './base/BaseInput.js';
+import Button from './base/BaseButton';
 
 class Login extends Component {
   constructor(props) {
@@ -32,6 +32,11 @@ class Login extends Component {
       })
 
       // get api...
+      console.log(this.props.login);
+      // this.props.login({
+        // name: this.inputValues[0],
+        // psw: this.inputValues[1]
+      // });
     } else {
       this.setState({
         status: false
@@ -39,7 +44,7 @@ class Login extends Component {
     }
   }
   render() {
-    return (<div className="Login" style={{paddingLeft: '40vw', textAlign: 'left'}}>
+    return (<div className="login">
       {
         this.state.config.map((item, index)=> {
           return <Input {...item} id={index} key={index} getValue={this.getValue} />

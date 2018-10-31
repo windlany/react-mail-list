@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import Input from '../components/base/BaseInput.js';
-import Button from '../components/base/BaseButton';
+import Input from './base/BaseInput.js';
+import Button from './base/BaseButton';
+
+import fetch from '../api';
 
 class Register extends Component {
   constructor(props) {
@@ -49,10 +51,28 @@ class Register extends Component {
         }
       });
       // post api...
+      fetch.postData('http://127.0.0.1:7001/api/user/creation', {
+        username: this.inputValues[0],
+        psw: this.inputValues[2]
+      }).then(()=> {
+        this.setState({
+          btn: {
+            prompt: '注册成功',
+            i: 'fa-check'
+          }
+        });
+      }).catch(()=> {
+        this.setState({
+          btn: {
+            prompt: '注册失败',
+            i: 'fa-times'
+          }
+        });
+      })
     }
   }
   render() {
-    return (<div className="register" style={{paddingLeft: '40vw', textAlign: 'left'}}>
+    return (<div className="register">
       {
         this.state.config.map((item, index)=> {
           return <Input {...item} id={index} key={index} getValue = {this.getValue} />
