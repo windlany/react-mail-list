@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Input from './base/BaseInput.js';
-import Button from './base/BaseButton';
+import Input from '../base/BaseInput.js';
+import Button from '../base/BaseButton';
 
-import fetch from '../api';
+import fetch from '../../api';
 
 class Register extends Component {
   constructor(props) {

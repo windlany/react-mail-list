@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { loginCheck } from '../actions';
-import Login from '../components/Login';
+import Login from '../components/home/Login';
 
 const mapStateToProps = state => {
   return {}
@@ -9,7 +9,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     login: (obj)=> {
-      console.log('login...');
       dispatch(loginCheck(obj));
     }
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
-import '../static/css/home.less';
+import '../../static/css/home.less';
 
 class Home extends Component {
   constructor(props) {

@@ -1,9 +1,12 @@
 import React, { PropTypes } from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 
-import Home from '../components/Home';
-import Register from '../components/Register';
-import Login from '../components/Login';
+import Home from '../components/home/Home';
+import Register from '../components/home/Register';
+import Login from '../containers/LoginCon';
+
+import List from '../components/list/List';
+import Concats from '../components/list/Concats';
 
 const Routes = (props)=> (
   <Router history={props.history}>
@@ -11,6 +14,10 @@ const Routes = (props)=> (
     <Route path='/' component={Home}>
       <IndexRoute component={Register} />
       <Route path='login' component={Login} />
+    </Route>
+
+    <Route path='/list' component={List}>
+      <IndexRoute component={Concats} />
     </Route>
 
   </Router>

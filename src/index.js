@@ -11,7 +11,6 @@ import reducer from './reducers';
 
 // import * as serviceWorker from './serviceWorker';
 import './static/css/index.css';
-import { loginCheck } from './actions';
 
 const store = createStore(
   reducer,

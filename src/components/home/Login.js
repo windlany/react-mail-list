@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Input from './base/BaseInput.js';
-import Button from './base/BaseButton';
+import Input from '../base/BaseInput.js';
+import Button from '../base/BaseButton';
 
 class Login extends Component {
   constructor(props) {
@@ -31,12 +31,11 @@ class Login extends Component {
         }
       })
 
-      // get api...
-      console.log(this.props.login);
-      // this.props.login({
-        // name: this.inputValues[0],
-        // psw: this.inputValues[1]
-      // });
+      // post login api...
+      this.props.login({
+        name: this.inputValues[0],
+        psw: this.inputValues[1]
+      });
     } else {
       this.setState({
         status: false
