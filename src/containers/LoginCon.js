@@ -2,10 +2,6 @@ import { connect } from 'react-redux';
 import { loginCheck } from '../actions';
 import Login from '../components/home/Login';
 
-const mapStateToProps = state => {
-  return {}
-}
-
 const mapDispatchToProps = dispatch => {
   return {
     login: (obj)=> {
@@ -15,7 +11,7 @@ const mapDispatchToProps = dispatch => {
 }
 
 const LoginCon = connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Login);
 

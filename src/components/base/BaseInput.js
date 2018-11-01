@@ -25,7 +25,7 @@ class Input extends React.Component {
   }
   render() {
     return (<div className="input">
-      <input type="text" placeholder={this.props.prompt} onFocus={this.focus} onBlur={this.blur} onChange={this.change} />
+      <input type="text" autocomplete="off" placeholder={this.props.prompt} onFocus={this.focus} onBlur={this.blur} onChange={this.change} />
       { (this.state.warn || this.props.fail) && <em>{ this.props.warn }</em>}
     </div>)
   }

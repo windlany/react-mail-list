@@ -6,7 +6,7 @@ import Register from '../components/home/Register';
 import Login from '../containers/LoginCon';
 
 import List from '../components/list/List';
-import Concats from '../components/list/Concats';
+import Concats from '../containers/ConcatsCon';
 
 const Routes = (props)=> (
   <Router history={props.history}>
