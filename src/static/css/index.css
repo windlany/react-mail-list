@@ -25,6 +25,6 @@ a {
   text-decoration: none;
   color: #000;
 }
-button:focus, input:focus {
+button:focus, input:focus, select:focus {
   outline: none;
 }

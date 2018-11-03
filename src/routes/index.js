@@ -7,6 +7,8 @@ import Login from '../containers/LoginCon';
 
 import List from '../components/list/List';
 import Concats from '../containers/ConcatsCon';
+import Add from '../components/list/Add';
+import Set from '../components/list/Set';
 
 const Routes = (props)=> (
   <Router history={props.history}>
@@ -18,6 +20,8 @@ const Routes = (props)=> (
 
     <Route path='/list' component={List}>
       <IndexRoute component={Concats} />
+      <Route path='/add' component={Add}/>
+      <Route path='/set' component={Set}/>
     </Route>
 
   </Router>

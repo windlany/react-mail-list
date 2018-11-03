@@ -1,10 +1,17 @@
 import { connect } from 'react-redux';
 import Concats from '../components/list/Concats';
-import { deleteC, setInfo } from '../actions';
+import { deleteC, setInfo, setFilter } from '../actions';
+
+function getVisible(concats, filter) {
+  if(filter && filter !== 'all') {
+    return concats.filter(item=> item.relative === filter);
+  } 
+  return concats;
+}
 
 const mapStateToProps = state => {
   return {
-    concats: state.concats
+    concats: getVisible(state.concats, state.filter)
   }
 }
 
@@ -15,6 +22,9 @@ const mapDispatchToProps = dispatch => {
     },
     save(index, obj) {
       dispatch(setInfo(index, obj));
+    },
+    select(filter) {
+      dispatch(setFilter(filter));
     }
   }
 }

@@ -64,7 +64,7 @@ export default class Item extends React.Component {
             <img src={conAvatar} alt="avatar" />
             <div>
               <input className="name" type="text" value={this.state.obj.name} onChange={(e)=> this.changeVal('name', e)} />
-              <input className="tel" type="text" value={this.state.obj.tel} onChange={(e)=> this.changeTel('tel', e)} />
+              <input className="tel" type="text" value={this.state.obj.tel} onChange={(e)=> this.changeVal('tel', e)} />
             </div>
           </div>
           <div className="button save" onClick={this.save}><i className="fa fa-check"></i></div>

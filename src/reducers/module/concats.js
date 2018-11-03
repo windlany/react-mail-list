@@ -5,13 +5,12 @@ const initConcats = [
 ]
 
 const concats = (state = initConcats, action)=> {  
+  let current = state;
   switch(action.type) {
     case 'DELETE':
-      var current = state;
       current.splice(action.index, 1); 
       return current;
     case 'SET_INFO':
-      var current = state;
       current[action.index] = Object.assign({}, state[action.index], action.obj);
       return current;
     default:

@@ -1,5 +1,5 @@
 import fetch from '../api';
-import { LOGIN, DELETE, SET_INFO } from '../constants';
+import { LOGIN, DELETE, SET_INFO, SET_FILTER } from '../constants';
 
 const login = (userInfo)=> {
   return {
@@ -31,5 +31,12 @@ export const setInfo = (index, obj) => {
     type: SET_INFO,
     index,
     obj
+  }
+}
+
+export const setFilter = (filter) => {
+  return {
+    type: SET_FILTER,
+    filter
   }
 }
