@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import '../../static/css/list.less';
-import atar from '../../static/img/contact.jpg';
+import avtar from '../../static/img/contact.jpg';
 
 export default function (props) {
   return (<div className='list'>
@@ -10,7 +10,7 @@ export default function (props) {
       <div className="welcome">
         <span className="name">{ }</span>，你好
         <div className="img">
-          <img src={atar} />
+          <img src={avtar} alt="avatar" />
         </div>
       </div>
     </div>

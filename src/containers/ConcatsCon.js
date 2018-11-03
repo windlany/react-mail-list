@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Concats from '../components/list/Concats';
+import { deleteC, setInfo } from '../actions';
 
 const mapStateToProps = state => {
   return {
@@ -7,6 +8,18 @@ const mapStateToProps = state => {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    delete(index) {
+      dispatch(deleteC(index));
+    },
+    save(index, obj) {
+      dispatch(setInfo(index, obj));
+    }
+  }
+}
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Concats);

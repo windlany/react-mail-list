@@ -1,0 +1,74 @@
+.li {
+  width: 220px;
+  margin-right: 48px;
+  list-style: none;
+  height: 58px; 
+  margin-bottom: 25px;
+  display: inline-block;
+  .contain {
+    display: inline-block;
+  }
+  .text {
+    width: 163px;
+    padding: 3px 0;
+    padding-left: 5px;
+    display: inline-block;
+    & > div {
+      margin-top: 3px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 2px;
+      vertical-align: middle; 
+    } 
+    .name {
+      width: 105px;
+      margin-bottom: 3px;
+      font-size: 18px;
+      margin-top: 0; 
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .tel {
+      width: 105px;
+      font-size: 15px;
+      margin: 0;
+    }
+    input {
+      display: block;
+      border: none;
+    }
+  }
+  .button {
+    height: 32px; 
+    width: 23px;
+    padding: 0;
+    margin-top: 11px;
+    border: none;
+    color: #0f88eb;
+    background: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+  }
+  .delete {
+    color: rgb(216, 17, 17) !important;
+  }
+  .save, .edit {
+    margin-right: 3px;
+  }
+  i {
+    font-size: 20px;
+  }
+  &:hover {
+    border: 1px solid #0f88eb;
+    border-radius: 5px;
+    .button {
+      display: inline-block;
+    } 
+  }
+}
