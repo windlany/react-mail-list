@@ -8,18 +8,19 @@ export default class Concats extends React.Component {
     this.state = {
       concats: this.props.concats
     }
+    this.radioArr = [
+      {type: 'all', rn: '所有联系人'}, 
+      {type: 'family', rn: '亲人'}, 
+      {type: 'friend', rn: '朋友'}, 
+      {type: 'class', rn: '同学'}
+    ];
+    this.selectIdx = 0;
   }
   delete = (index)=> { // 删除联系人
     this.props.delete(index); // 后期改为promise
-    this.setState({
-      concats: this.props.concats
-    })
   }
   save(index, obj) { // 保存对联系人的修改
     this.props.save(index, obj); // 后期改为promise
-    this.setState({
-      concats: this.props.concats
-    })
   }
   search = (e)=> {
     let val = e.target.value; 
@@ -28,6 +29,10 @@ export default class Concats extends React.Component {
         return item.name.indexOf(val) !== -1;
       })
     })
+  }
+  click = (type, index)=> { // 选项卡
+    this.selectIdx = index;
+    this.props.select(type);
   }
   componentDidMount() {
     this.props.select('all');
@@ -45,10 +50,15 @@ export default class Concats extends React.Component {
       </div>
       <p className="all">共有 { this.state.concats.length } 个联系人</p>
       <div className="select">
-        <input type="radio" name="contacts" onClick={()=> this.props.select('all')} />所有联系人
-        <input type="radio" name="contacts" onClick={()=> this.props.select('family')} />亲人
-        <input type="radio" name="contacts" onClick={()=> this.props.select('friend')} />朋友
-        <input type="radio" name="contacts" onClick={()=> this.props.select('class')} />同学
+        {
+          this.radioArr.map((item, index)=> {
+            return <span>
+              <input type="radio" name="contacts" 
+                checked={this.selectIdx === index} 
+                onClick={()=> this.click(item.type, index)} /> {item.rn}
+            </span>
+          })
+        }
       </div>
       { 
         this.state.concats.length > 0 ? (

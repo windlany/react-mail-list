@@ -5,7 +5,7 @@ const initConcats = [
 ]
 
 const concats = (state = initConcats, action)=> {  
-  let current = state;
+  let current = Object.assign([], state);
   switch(action.type) {
     case 'DELETE':
       current.splice(action.index, 1); 
