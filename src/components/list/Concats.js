@@ -45,7 +45,7 @@ export default class Concats extends React.Component {
   render() {
     return (<div className='concats'>
       <div className="search">
-        <input type="text" placeholder="请输入搜索联系人" onChange={this.search} />
+        <input type="text" placeholder="请输入搜索联系人" autoComplete='off' onChange={this.search} />
         <span><i className="fa fa-search"></i></span>
       </div>
       <p className="all">共有 { this.state.concats.length } 个联系人</p>

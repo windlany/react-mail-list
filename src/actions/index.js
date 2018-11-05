@@ -1,5 +1,5 @@
 import fetch from '../api';
-import { LOGIN, DELETE, SET_INFO, SET_FILTER } from '../constants';
+import { LOGIN, ADD, DELETE, SET_INFO, SET_FILTER } from '../constants';
 
 const login = (userInfo)=> {
   return {
@@ -18,6 +18,13 @@ export const loginCheck = obj => dispatch => (
     })
   }) 
 );
+
+export const add = concat => {
+  return {
+    type: ADD,
+    concat
+  }
+}
 
 export const deleteC = index => {
   return {

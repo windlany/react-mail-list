@@ -5,13 +5,17 @@ const initConcats = [
 ]
 
 const concats = (state = initConcats, action)=> {  
-  let current = Object.assign([], state);
+  // current和state不同地址才能触发componentWillReceiveProps
+  let current = Object.assign([], state); 
   switch(action.type) {
     case 'DELETE':
       current.splice(action.index, 1); 
       return current;
     case 'SET_INFO':
       current[action.index] = Object.assign({}, state[action.index], action.obj);
+      return current;
+    case 'ADD': 
+      current.push(action.concat);
       return current;
     default:
       return state;

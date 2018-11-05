@@ -7,7 +7,7 @@ import Login from '../containers/LoginCon';
 
 import List from '../components/list/List';
 import Concats from '../containers/ConcatsCon';
-import Add from '../components/list/Add';
+import Add from '../containers/AddCon';
 import Set from '../components/list/Set';
 
 const Routes = (props)=> (
