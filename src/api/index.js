@@ -12,6 +12,7 @@
 export default {
   postData: (url, obj)=> { // 登录、注册、添加联系人
     return new Promise((resolve, reject)=> {
+      console.log('post');
       fetch(url, {
         method: 'POST',
         headers: new Headers({

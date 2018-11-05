@@ -5,10 +5,10 @@ import Home from '../components/home/Home';
 import Register from '../components/home/Register';
 import Login from '../containers/LoginCon';
 
-import List from '../components/list/List';
+import List from '../containers/ListCon';
 import Concats from '../containers/ConcatsCon';
 import Add from '../containers/AddCon';
-import Set from '../components/list/Set';
+import Set from '../containers/SetCon';
 
 const Routes = (props)=> (
   <Router history={props.history}>

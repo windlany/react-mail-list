@@ -8,7 +8,7 @@ export default function (props) {
     <div className="head">
       <div className="logo">速讯</div>
       <div className="welcome">
-        <span className="name">{ }</span>，你好
+        <span className="name">{ props.name }</span>，你好
         <div className="img">
           <img src={avtar} alt="avatar" />
         </div>
